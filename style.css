@@ -1,0 +1,116 @@
+/* Minimal academic style — adjust the variables to make it yours */
+:root{
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --rule: #e8e8e8;
+  --link: #0b57d0;
+  --max: 760px;
+}
+
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.55;
+}
+
+.wrap{
+  max-width: var(--max);
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+.top{
+  display:flex;
+  gap:22px;
+  align-items:flex-end;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 18px;
+}
+
+h1{
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px 0;
+}
+
+.sub{
+  margin:0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.links{
+  margin: 10px 0 0 0;
+  font-size: 15px;
+}
+
+.nav a{
+  margin-left: 14px;
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.nav a:hover{ color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+a{ color: var(--link); text-decoration: none; }
+a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+.sep{ margin: 0 8px; color: var(--muted); }
+.muted{ color: var(--muted); }
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+.section{
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+h2{
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+h3{
+  font-size: 15px;
+  margin: 18px 0 10px 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+p{ margin: 0 0 10px 0; }
+
+.bullets{
+  margin: 0;
+  padding-left: 18px;
+}
+.bullets li{ margin: 6px 0; }
+
+.pub{ padding: 10px 0; }
+.pub + .pub{
+  border-top: 1px dashed var(--rule);
+  padding-top: 14px;
+  margin-top: 10px;
+}
+.pub-title{ font-weight: 600; }
+.pub-meta{ color: var(--muted); font-size: 14px; margin-top: 3px; }
+.pub-links{ margin-top: 8px; font-size: 14px; }
+
+.hint{ margin-top: 14px; }
+
+.foot{
+  padding-top: 18px;
+  border-bottom: none;
+}
+
+/* Mobile tweaks */
+@media (max-width: 520px){
+  .wrap{ margin: 28px auto; }
+  h1{ font-size: 26px; }
+  .nav a{ margin-left: 10px; }
+}
