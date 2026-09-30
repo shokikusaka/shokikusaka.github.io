@@ -5,7 +5,7 @@
   --muted: #555555;
   --rule: #e8e8e8;
   --link: #0b57d0;
-  --max: 760px;
+  --max: 1000px;
 }
 
 *{ box-sizing: border-box; }
